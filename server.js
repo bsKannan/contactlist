@@ -2,7 +2,14 @@ var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
 
-var db = mongojs('contactlist1', ['contactlist1']);
+// var db = mongojs('contactlist1', ['contactlist1']);
+// var db = 'mongodb+srv://wanchain:wanchain@cluster0-nmisc.mongodb.net/contactlist1';
+// var db = mongojs('mongodb+srv://wanchain:wanchain@cluster0-nmisc.mongodb.net/contactlist1', ['mycollection'])
+
+
+
+
+var db = mongojs('mongodb://contactlist:contactlist1@ds147225.mlab.com:47225/contactlist1')//working
 var bodyParser = require('body-parser');
 
 db.on('ready', function () {
